@@ -3,60 +3,50 @@ import { ArrowRight } from 'lucide-react'
 
 const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'hello@rockellstech.com'
 
+/** Shift-style hero: centered headline block, “Give it a try”, dual CTAs, photo band */
 export function Hero() {
   return (
-    <section className="hero hero-shift section">
-      <div className="wrap hero-shift-inner">
-        <div className="hero-copy">
-          <motion.p
-            className="hero-kicker"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.08, duration: 0.4 }}
-          >
-            Jack Rockell · Former CEO, Eagle AI Labs
-          </motion.p>
-          <motion.h1
-            className="hero-shift-title"
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.12, duration: 0.5 }}
-          >
-            Products that ship—<span className="text-gradient">models, infra, and UI.</span>
-          </motion.h1>
-          <motion.p
-            className="hero-shift-lead"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.45 }}
-          >
-            I build end-to-end: live trading and ML systems, sports and betting products, compliance-style onboarding, and
-            operator-facing apps. Former CEO work; hands-on product work now. If you need someone who owns the loop from spec to
-            production, that&apos;s what I do.
-          </motion.p>
-          <motion.div
-            className="hero-shift-cta"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.4 }}
-          >
+    <section className="s-hero section">
+      <div className="s-hero-wrap">
+        <motion.div
+          className="s-hero-copy"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <p className="s-hero-brand">Rockell Tech · Jack Rockell</p>
+          <h1 className="s-hero-h1">
+            <span className="s-hero-line1">Product-first · Built to ship</span>
+            <span className="s-hero-line2">
+              Models, infra, and UI that survive <span className="text-gradient">contact with reality.</span>
+            </span>
+          </h1>
+          <p className="s-hero-sub">
+            Former CEO at Eagle AI Labs (two and a half years). Hands-on product now—crypto ML, sports products,
+            compliance-style onboarding, trading UIs. I own the loop from spec to something running in prod.
+          </p>
+          <p className="s-hero-try">
+            <a href="#pillars">Give it a try — see how I work ↓</a>
+          </p>
+          <div className="s-hero-btns">
             <a className="shift-btn shift-btn-solid shift-btn-lg" href={`mailto:${contactEmail}`}>
               Get in touch
               <ArrowRight size={18} aria-hidden />
             </a>
-            <a className="shift-btn shift-btn-outline shift-btn-lg" href="#builds">
+            <a className="shift-btn shift-btn-outline shift-btn-lg" href="#ships">
               Explore the work
             </a>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
+
         <motion.div
-          className="hero-visual"
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.18, duration: 0.55 }}
+          className="s-hero-photo"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.5 }}
         >
           <div className="hero-frame hero-frame-shift">
-            <img src="/hero.png" alt="Jack Rockell" width={560} height={560} className="hero-img" />
+            <img src="/hero.png" alt="Jack Rockell" width={720} height={720} className="hero-img" />
           </div>
         </motion.div>
       </div>

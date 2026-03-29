@@ -23,8 +23,12 @@ export function Header() {
 
         <nav className="shift-nav" aria-label="Primary">
           <a href="#pillars">Capabilities</a>
+          <a href="#deep">Detail</a>
+          <a href="#ships">Surfaces</a>
           <a href="#story">Background</a>
           <a href="#builds">Work</a>
+          <a href="#integrations">Stack</a>
+          <a href="#contact">Contact</a>
           <a href={githubUrl} target="_blank" rel="noreferrer">
             GitHub
           </a>
