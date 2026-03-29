@@ -33,7 +33,7 @@ const blocks = [
   },
 ]
 
-export function ShiftDeepDive() {
+export function DeepDive() {
   return (
     <section id="deep" className="s-deep section">
       <div className="wrap">

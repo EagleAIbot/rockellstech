@@ -1,45 +1,53 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { getGithubUrl } from '../config'
+import { BrandMark } from './BrandMark'
 
 const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'hello@rockellstech.com'
+
+const nav = [
+  { href: '#pillars', label: 'Product' },
+  { href: '#deep', label: 'Approach' },
+  { href: '#ships', label: 'Surfaces' },
+  { href: '#story', label: 'Background' },
+  { href: '#builds', label: 'Code' },
+  { href: '#integrations', label: 'Stack' },
+  { href: '#contact', label: 'Contact' },
+]
 
 export function Header() {
   const githubUrl = getGithubUrl()
   return (
-    <motion.header
-      className="shift-header"
-      initial={{ opacity: 0, y: -8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <div className="shift-header-inner">
-        <a href="#" className="shift-logo">
-          <span className="shift-logo-mark" aria-hidden>
-            R
+    <motion.header className="rt-header" initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+      <div className="rt-header-glow" aria-hidden />
+      <div className="rt-header-inner">
+        <a href="#" className="rt-logo">
+          <BrandMark />
+          <span className="rt-logo-wordmark">
+            <span className="rt-logo-primary">Rockell</span>
+            <span className="rt-logo-secondary">Tech</span>
           </span>
-          <span className="shift-logo-text">Rockell Tech</span>
         </a>
 
-        <nav className="shift-nav" aria-label="Primary">
-          <a href="#pillars">Capabilities</a>
-          <a href="#deep">Detail</a>
-          <a href="#ships">Surfaces</a>
-          <a href="#story">Background</a>
-          <a href="#builds">Work</a>
-          <a href="#integrations">Stack</a>
-          <a href="#contact">Contact</a>
-          <a href={githubUrl} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
+        <nav className="rt-nav-wrap" aria-label="Primary">
+          <div className="rt-nav-pill">
+            {nav.map((item) => (
+              <a key={item.href} href={item.href}>
+                {item.label}
+              </a>
+            ))}
+            <a href={githubUrl} target="_blank" rel="noreferrer" className="rt-nav-gh">
+              GitHub
+            </a>
+          </div>
         </nav>
 
-        <div className="shift-header-actions">
-          <a href={githubUrl} className="shift-btn shift-btn-ghost" target="_blank" rel="noreferrer">
-            View repo
+        <div className="rt-header-actions">
+          <a href={githubUrl} className="rt-btn rt-btn-ghost" target="_blank" rel="noreferrer">
+            Repo
           </a>
-          <a className="shift-btn shift-btn-solid" href={`mailto:${contactEmail}`}>
-            Get in touch
+          <a className="rt-btn rt-btn-solid" href={`mailto:${contactEmail}`}>
+            Contact
             <ArrowUpRight size={16} strokeWidth={2.5} aria-hidden />
           </a>
         </div>

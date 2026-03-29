@@ -3,7 +3,6 @@ import { ArrowRight } from 'lucide-react'
 
 const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'hello@rockellstech.com'
 
-/** Shift-style hero: centered headline block, “Give it a try”, dual CTAs, photo band */
 export function Hero() {
   return (
     <section className="s-hero section">
@@ -29,11 +28,11 @@ export function Hero() {
             <a href="#pillars">Give it a try — see how I work ↓</a>
           </p>
           <div className="s-hero-btns">
-            <a className="shift-btn shift-btn-solid shift-btn-lg" href={`mailto:${contactEmail}`}>
+            <a className="rt-btn rt-btn-solid rt-btn-lg" href={`mailto:${contactEmail}`}>
               Get in touch
               <ArrowRight size={18} aria-hidden />
             </a>
-            <a className="shift-btn shift-btn-outline shift-btn-lg" href="#ships">
+            <a className="rt-btn rt-btn-outline rt-btn-lg" href="#ships">
               Explore the work
             </a>
           </div>
@@ -45,7 +44,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.5 }}
         >
-          <div className="hero-frame hero-frame-shift">
+          <div className="hero-frame hero-frame-accent">
             <img src="/hero.png" alt="Jack Rockell" width={720} height={720} className="hero-img" />
           </div>
         </motion.div>

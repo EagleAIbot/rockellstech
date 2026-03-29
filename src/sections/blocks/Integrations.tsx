@@ -1,4 +1,4 @@
-export function ShiftIntegrations() {
+export function Integrations() {
   const rows = [
     ['GitHub', 'Docker', 'AWS', 'Vite'],
     ['React', 'Python', 'Node', 'PostgreSQL'],

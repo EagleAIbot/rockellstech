@@ -1,7 +1,5 @@
-/** Public website source — https://github.com/EagleAIbot/rockellstech */
 export const DEFAULT_GITHUB_REPO_URL = 'https://github.com/EagleAIbot/rockellstech'
 
-/** Profile — “see everything I’ve open-sourced” */
 export const DEFAULT_GITHUB_PROFILE_URL = 'https://github.com/EagleAIbot'
 
 export function getGithubUrl(): string {

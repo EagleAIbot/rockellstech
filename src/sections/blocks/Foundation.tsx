@@ -13,7 +13,7 @@ const tiles = [
   { t: 'React & PWAs', c: 'Frontend' },
 ]
 
-export function ShiftFoundation() {
+export function Foundation() {
   return (
     <section id="foundations" className="s-found section">
       <div className="wrap">

@@ -25,7 +25,7 @@ export function GitHubCTA() {
                 steal the layout, or deploy your own version.
               </p>
             </div>
-            <a href={githubUrl} className="shift-btn shift-btn-solid github-btn" target="_blank" rel="noreferrer">
+            <a href={githubUrl} className="rt-btn rt-btn-solid github-btn" target="_blank" rel="noreferrer">
               Open repository
               <ExternalLink size={17} aria-hidden />
             </a>

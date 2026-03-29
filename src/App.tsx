@@ -2,35 +2,35 @@ import './App.css'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Hero } from './sections/Hero'
-import { ShiftMarquee } from './sections/shift/ShiftMarquee'
-import { ShiftPillarsFive } from './sections/shift/ShiftPillarsFive'
-import { ShiftDeepDive } from './sections/shift/ShiftDeepDive'
-import { ShiftShipCards } from './sections/shift/ShiftShipCards'
-import { ShiftFoundation } from './sections/shift/ShiftFoundation'
+import { StackMarquee } from './sections/blocks/Marquee'
+import { PillarsFive } from './sections/blocks/PillarsFive'
+import { DeepDive } from './sections/blocks/DeepDive'
+import { ShipCards } from './sections/blocks/ShipCards'
+import { Foundation } from './sections/blocks/Foundation'
 import { Story } from './sections/Story'
 import { Builds } from './sections/Builds'
-import { ShiftAdvantage } from './sections/shift/ShiftAdvantage'
-import { ShiftIntegrations } from './sections/shift/ShiftIntegrations'
-import { ShiftClose } from './sections/shift/ShiftClose'
+import { Advantage } from './sections/blocks/Advantage'
+import { Integrations } from './sections/blocks/Integrations'
+import { CloseSection } from './sections/blocks/Close'
 
 export default function App() {
   return (
     <div className="app">
-      <div className="shift-bg" aria-hidden />
+      <div className="rt-bg" aria-hidden />
       <div className="content">
         <Header />
         <main>
           <Hero />
-          <ShiftMarquee />
-          <ShiftPillarsFive />
-          <ShiftDeepDive />
-          <ShiftShipCards />
+          <StackMarquee />
+          <PillarsFive />
+          <DeepDive />
+          <ShipCards />
           <Story />
-          <ShiftFoundation />
+          <Foundation />
           <Builds />
-          <ShiftAdvantage />
-          <ShiftIntegrations />
-          <ShiftClose />
+          <Advantage />
+          <Integrations />
+          <CloseSection />
         </main>
         <Footer />
       </div>

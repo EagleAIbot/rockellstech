@@ -29,7 +29,7 @@ const pillars = [
   },
 ]
 
-export function ShiftPillarsFive() {
+export function PillarsFive() {
   return (
     <section id="pillars" className="s-pillars section">
       <div className="wrap">

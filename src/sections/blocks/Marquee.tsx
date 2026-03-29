@@ -1,5 +1,4 @@
-/** Mirrors Shift “Proud partnerships” strip — your stack */
-export function ShiftMarquee() {
+export function StackMarquee() {
   const items = ['Python', 'TypeScript', 'React', 'PyTorch', 'AWS', 'Docker', 'PostgreSQL', 'Real-time data']
   return (
     <section className="s-marquee" aria-label="Stack">

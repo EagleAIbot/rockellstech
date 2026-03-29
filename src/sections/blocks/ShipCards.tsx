@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 
-/** Mirrors Shift “AI agents” card grid — your product areas */
 const cards = [
   {
     name: 'Eagle Stack',
@@ -34,7 +33,7 @@ const cards = [
   },
 ]
 
-export function ShiftShipCards() {
+export function ShipCards() {
   return (
     <section id="ships" className="s-ships section">
       <div className="wrap">

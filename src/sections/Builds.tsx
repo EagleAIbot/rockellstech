@@ -8,7 +8,6 @@ import {
   Github,
   LayoutDashboard,
   ShieldCheck,
-  Sparkles,
   Trophy,
 } from 'lucide-react'
 import { featuredRepos, moreRepos } from '../data/featuredRepos'
@@ -19,42 +18,42 @@ const items = [
     icon: Cpu,
     title: 'Crypto & markets',
     body:
-      'Forward curves, prediction and retrain pipelines, analytics APIs, AWS-style deploys, Dynamo/S3/Rabbit-style wiring—the boring stuff that has to work when markets are open.',
+      'Forward curves, retrain paths, analytics APIs, AWS-shaped plumbing—built for hours when markets are open.',
     span: 'large',
   },
   {
     icon: Trophy,
-    title: 'Sports & betting products',
+    title: 'Sports & betting',
     body:
-      'Dashboards, operator tooling, models around football (cards, shots, team goals), data pulls, and UIs that get used on match week—not a one-off notebook.',
+      'Dashboards and models around fixtures and operators—used on match week, not shelved after a demo.',
     span: 'medium',
   },
   {
     icon: ShieldCheck,
     title: 'Compliance & onboarding',
     body:
-      'AML-style screening flows, generated reports, Flask backends, React front ends for regulated onboarding. Built for real accountancy workflows, not a hackathon demo.',
+      'Screening flows, reports, Flask and React surfaces aligned with how regulated onboarding actually runs.',
     span: 'medium',
   },
   {
     icon: LayoutDashboard,
     title: 'Trading & ops UIs',
     body:
-      'Crypto trading PWAs: sockets, wallets, mirror modes, notifications. Built for people who stare at screens all day.',
+      'PWAs with sockets, wallets, and mirror modes—built for people who live in the product.',
     span: 'small',
   },
   {
     icon: BarChart3,
     title: 'Research → production',
     body:
-      'Taking experiments from “ran once” to repeatable train/eval, containers, and deploys—with a frontend on top when it matters.',
+      'Repeatable train and eval, containers, deploys—plus a frontend when the loop needs a face.',
     span: 'small',
   },
   {
     icon: Activity,
     title: 'Signals & execution',
     body:
-      'Regime filters, validation tooling, and logic around when systems act—not just what they print on a chart.',
+      'Filters and validation around when systems act—not only what they plot.',
     span: 'small',
   },
 ]
@@ -81,105 +80,12 @@ export function Builds() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          What I&apos;ve actually shipped.
+          Shipping lanes
         </motion.h2>
         <p className="lead builds-sub">
-          Public repos aren&apos;t garnish—they&apos;re receipts. Below is a curated set with context on{' '}
-          <strong className="text-strong">why each one matters</strong>, not just what the folder is called.
+          Where the work clusters—models, services, and UI. Same thread from spec to production.
         </p>
 
-        <div className="repo-showcase">
-          <div className="repo-showcase-head">
-            <h3 className="repo-showcase-title">
-              <Sparkles size={22} strokeWidth={2} aria-hidden />
-              Featured repositories
-            </h3>
-            <p className="repo-showcase-lead">
-              Real links, real deploys where noted. Read the flex lines—then click through and verify the code.
-            </p>
-          </div>
-
-          <div className="repo-grid">
-            {featuredRepos.map((repo, i) => (
-              <motion.article
-                key={repo.repoUrl}
-                className="repo-card"
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.45, delay: i * 0.05 }}
-              >
-                <header className="repo-card-top">
-                  <span className="repo-card-cat">{repo.category}</span>
-                  {repo.liveUrl ? (
-                    <span className="repo-card-live" title="Has a public live URL">
-                      Live
-                    </span>
-                  ) : null}
-                </header>
-                <h4 className="repo-card-name">{repo.title}</h4>
-                <p className="repo-card-hook">{repo.hook}</p>
-                <ul className="repo-card-flex" aria-label="Why it hits">
-                  {repo.flex.map((line) => (
-                    <li key={line}>{line}</li>
-                  ))}
-                </ul>
-                <div className="repo-card-stack">
-                  {repo.stack.map((t) => (
-                    <span key={t} className="repo-stack-pill">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-                <footer className="repo-card-actions">
-                  <a className="repo-link repo-link-primary" href={repo.repoUrl} target="_blank" rel="noreferrer">
-                    <Github size={17} strokeWidth={2} aria-hidden />
-                    View repo
-                    <ArrowUpRight size={16} aria-hidden />
-                  </a>
-                  {repo.liveUrl ? (
-                    <a className="repo-link repo-link-secondary" href={repo.liveUrl} target="_blank" rel="noreferrer">
-                      <ExternalLink size={16} aria-hidden />
-                      {repo.liveLabel ?? 'Open live'}
-                    </a>
-                  ) : null}
-                </footer>
-              </motion.article>
-            ))}
-          </div>
-
-          <div className="repo-more">
-            <p className="repo-more-label">Also on GitHub</p>
-            <ul className="repo-more-list">
-              {moreRepos.map((r) => (
-                <li key={r.repoUrl}>
-                  <a href={r.repoUrl} target="_blank" rel="noreferrer">
-                    <span className="repo-more-name">{r.name}</span>
-                    <span className="repo-more-note">{r.note}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <a className="repo-profile-cta" href={profileUrl} target="_blank" rel="noreferrer">
-              <Github size={18} aria-hidden />
-              See every public repo on profile
-              <ArrowUpRight size={17} aria-hidden />
-            </a>
-          </div>
-        </div>
-
-        <motion.h3
-          className="builds-bento-title"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-        >
-          Capability map <span className="builds-bento-muted">(how the work clusters)</span>
-        </motion.h3>
-        <p className="lead builds-bento-lead">
-          Same person across these lanes—models, services, and frontends, often with me wiring the space between research and what users click.
-        </p>
         <div className="bento">
           {items.map((item, i) => (
             <motion.article
@@ -197,6 +103,75 @@ export function Builds() {
               <p className="muted bento-body">{item.body}</p>
             </motion.article>
           ))}
+        </div>
+
+        <div className="work-ledger">
+          <div className="work-ledger-head">
+            <h3 className="work-ledger-title">Public code</h3>
+            <p className="work-ledger-lead">
+              Representative repos—short context, then open the source.{' '}
+              <a href={profileUrl} target="_blank" rel="noreferrer" className="work-ledger-profile">
+                Full profile →
+              </a>
+            </p>
+          </div>
+
+          <ul className="work-ledger-list">
+            {featuredRepos.map((repo, i) => (
+              <motion.li
+                key={repo.repoUrl}
+                className="work-ledger-row"
+                initial={{ opacity: 0, x: -12 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: '-30px' }}
+                transition={{ duration: 0.35, delay: Math.min(i * 0.04, 0.2) }}
+              >
+                <div className="work-ledger-main">
+                  <div className="work-ledger-meta">
+                    <span className="work-ledger-cat">{repo.category}</span>
+                    {repo.liveUrl ? <span className="work-ledger-live">Live</span> : null}
+                  </div>
+                  <span className="work-ledger-name">{repo.title}</span>
+                  <p className="work-ledger-hook">{repo.hook}</p>
+                  <ul className="work-ledger-points">
+                    {repo.points.map((p) => (
+                      <li key={p}>{p}</li>
+                    ))}
+                  </ul>
+                  <div className="work-ledger-stack">
+                    {repo.stack.map((t) => (
+                      <span key={t}>{t}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="work-ledger-actions">
+                  <a className="work-ledger-link" href={repo.repoUrl} target="_blank" rel="noreferrer">
+                    <Github size={16} strokeWidth={2} aria-hidden />
+                    Source
+                    <ArrowUpRight size={15} aria-hidden />
+                  </a>
+                  {repo.liveUrl ? (
+                    <a className="work-ledger-link work-ledger-link-dim" href={repo.liveUrl} target="_blank" rel="noreferrer">
+                      <ExternalLink size={15} aria-hidden />
+                      {repo.liveLabel ?? 'Open'}
+                    </a>
+                  ) : null}
+                </div>
+              </motion.li>
+            ))}
+          </ul>
+
+          <div className="work-ledger-more">
+            <span className="work-ledger-more-label">More</span>
+            <div className="work-ledger-more-links">
+              {moreRepos.map((r) => (
+                <a key={r.repoUrl} href={r.repoUrl} target="_blank" rel="noreferrer">
+                  {r.name}
+                  <span className="work-ledger-more-note">{r.note}</span>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

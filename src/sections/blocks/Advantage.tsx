@@ -19,7 +19,7 @@ const process = [
   { title: 'Iterate without drama', text: 'Backlog is honest; rework is planned.' },
 ]
 
-export function ShiftAdvantage() {
+export function Advantage() {
   return (
     <>
       <section id="advantage" className="s-adv section">

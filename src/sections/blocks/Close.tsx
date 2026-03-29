@@ -8,7 +8,7 @@ const quotes = [
   { q: 'Our ML path finally looked like something we could operate, not just train.', a: 'Engineering manager', o: 'Fintech' },
 ]
 
-export function ShiftClose() {
+export function CloseSection() {
   const githubUrl = getGithubUrl()
   return (
     <section id="contact" className="s-close section">
@@ -32,11 +32,11 @@ export function ShiftClose() {
             Email is fastest. This site is open source on GitHub if you want the layout or to fork it.
           </p>
           <div className="s-close-btns">
-            <a className="shift-btn shift-btn-solid shift-btn-lg" href={`mailto:${contactEmail}`}>
+            <a className="rt-btn rt-btn-solid rt-btn-lg" href={`mailto:${contactEmail}`}>
               Get in touch
               <ArrowRight size={18} aria-hidden />
             </a>
-            <a className="shift-btn shift-btn-outline shift-btn-lg" href={githubUrl} target="_blank" rel="noreferrer">
+            <a className="rt-btn rt-btn-outline rt-btn-lg" href={githubUrl} target="_blank" rel="noreferrer">
               Open repository
               <ExternalLink size={17} aria-hidden />
             </a>
