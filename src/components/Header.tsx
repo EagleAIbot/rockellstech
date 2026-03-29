@@ -17,7 +17,7 @@ export function Header() {
           <span className="logo-text">Rockell Tech</span>
         </a>
         <nav className="nav">
-          <a href="#story">Story</a>
+          <a href="#story">Background</a>
           <a href="#builds">Work</a>
           <a href="#github">GitHub</a>
           <a href={githubUrl} className="nav-gh" target="_blank" rel="noreferrer">

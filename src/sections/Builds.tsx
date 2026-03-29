@@ -11,44 +11,44 @@ import {
 const items = [
   {
     icon: Cpu,
-    title: 'Crypto & markets ML (Eagle-scale)',
+    title: 'Crypto & markets',
     body:
-      'Delivered forward-curve engines, TFT/LSTM-style prediction stacks, analytics and retrain services, DynamoDB/S3/RabbitMQ-style pipelines, and migration-ready APIs—the same class of systems that power serious trading and research orgs, not weekend notebooks.',
+      'Forward curves, prediction and retrain pipelines, analytics APIs, AWS-style deploys, Dynamo/S3/Rabbit-style wiring—the boring stuff that has to work when markets are open.',
     span: 'large',
   },
   {
     icon: Trophy,
-    title: 'Sports intelligence — full product surface',
+    title: 'Sports & betting products',
     body:
-      'Built and shipped prediction-era products: operator automation, live dashboards and PWAs, model pipelines for football/soccer (cards, shots, team goals), data integrations, and the kind of end-user UX that runs on real match weeks.',
+      'Dashboards, operator tooling, models around football (cards, shots, team goals), data pulls, and UIs that get used on match week—not a one-off notebook.',
     span: 'medium',
   },
   {
     icon: ShieldCheck,
-    title: 'Compliance & onboarding tech',
+    title: 'Compliance & onboarding',
     body:
-      'Delivered AML-style screening pipelines, report generation, Flask APIs, and React front-ends for accountancy/regulated onboarding—production-shaped workflows, not slideware.',
+      'AML-style screening flows, generated reports, Flask backends, React front ends for regulated onboarding. Built for real accountancy workflows, not a hackathon demo.',
     span: 'medium',
   },
   {
     icon: LayoutDashboard,
-    title: 'Trading & operator experiences',
+    title: 'Trading & ops UIs',
     body:
-      'Shipped crypto trading PWAs and dashboards: real-time sockets, wallet flows, mirror/presentation modes, notifications—interfaces meant for operators and power users under load.',
+      'Crypto trading PWAs: sockets, wallets, mirror modes, notifications. Built for people who stare at screens all day.',
     span: 'small',
   },
   {
     icon: BarChart3,
-    title: 'From research to release',
+    title: 'Research → production',
     body:
-      'Owned the path from experiment to reproducible train/eval, containerised and AWS-style deploys, and frontends that sit on top—so delivery is repeatable, not a one-off demo.',
+      'Taking experiments from “ran once” to repeatable train/eval, containers, and deploys—with a frontend on top when it matters.',
     span: 'small',
   },
   {
     icon: Activity,
-    title: 'Signal, regime & execution thinking',
+    title: 'Signals & execution',
     body:
-      'Built regime filters, validation tooling, and execution-adjacent logic—because what matters is when systems act in live markets, not a leaderboard on a static CSV.',
+      'Regime filters, validation tooling, and logic around when systems act—not just what they print on a chart.',
     span: 'small',
   },
 ]
@@ -64,7 +64,7 @@ export function Builds() {
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
         >
-          What I’ve built & delivered
+          Work
         </motion.p>
         <motion.h2
           className="headline-lg builds-head"
@@ -73,13 +73,11 @@ export function Builds() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          The repos you see are the work—not side quests.
+          What I&apos;ve actually shipped.
         </motion.h2>
         <p className="lead builds-sub">
-          Over years I&apos;ve <strong className="text-strong">owned and shipped</strong> across crypto ML, sports products,
-          compliance stacks, and trading UIs. The footprint in those codebases isn&apos;t theory: it&apos;s models, services,
-          frontends, and ops paths I&apos;ve <strong className="text-strong">built, wired, and delivered</strong>—often as the
-          person stitching research, infra, and product together.
+          The repos aren&apos;t a portfolio garnish. They&apos;re where the models, services, and frontends live—often with me
+          connecting the pieces between research, infra, and what users click.
         </p>
         <div className="bento">
           {items.map((item, i) => (

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'hello@rockellstech.com'
 
@@ -14,8 +14,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.45 }}
           >
-            <Sparkles size={14} className="hero-badge-icon" aria-hidden />
-            AI-native builder · Ex-CEO · Shipped systems
+            Jack Rockell · Eagle AI Labs (ex-CEO)
           </motion.div>
           <motion.h1
             className="headline-xl hero-title"
@@ -23,7 +22,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.55 }}
           >
-            I build serious AI products—<span className="text-gradient">end to end.</span>
+            I build products that ship—<span className="text-gradient">models, infra, UI.</span>
           </motion.h1>
           <motion.p
             className="lead hero-lead"
@@ -31,11 +30,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.5 }}
           >
-            I&apos;m <strong className="text-strong">Jack Rockell</strong>. I led Eagle AI Labs as CEO for two and a half years,
-            then went deeper into product as the company evolved. The breadth in my repos reflects what I&apos;ve actually{' '}
-            <strong className="text-strong">built and delivered</strong>: crypto ML and market systems, full sports prediction
-            products, compliance-grade onboarding tech, and trading operator UIs—models, APIs, deploy paths, and the interfaces
-            people use—not a single narrow lane.
+            I ran Eagle AI Labs as CEO for two and a half years, then spent more of my time in the product: live systems,
+            traders&apos; tools, the stuff that breaks if you get it wrong. My work spans crypto ML, sports products,
+            compliance-style onboarding stacks, and trading UIs. It&apos;s all in the repos—nothing there for show only.
           </motion.p>
           <motion.p
             className="lead hero-lead hero-lead-secondary"
@@ -43,11 +40,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.32, duration: 0.5 }}
           >
-            I&apos;m <strong className="text-strong">not a &quot;coder&quot; in the classic sense</strong>—I don&apos;t lean on a
-            traditional CS identity. I <strong className="text-strong">build with AI</strong>: as a core skill, not a shortcut. I
-            learned to pair AI tooling with architecture, taste, and shipping discipline—and I&apos;m{' '}
-            <strong className="text-strong">exceptionally strong</strong> at that workflow. If you&apos;re hiring for people who
-            can ship in the AI era (think Meta, frontier product teams, zero-hand-holding execution)—I&apos;m that profile.
+            I didn&apos;t come up through a classic CS degree path. I use AI tools the way I use any other tool: to move fast,
+            keep quality high, and own the full loop from idea to something running in prod. If that&apos;s the kind of builder
+            you need, we should talk.
           </motion.p>
           <motion.div
             className="hero-cta"
@@ -56,11 +51,11 @@ export function Hero() {
             transition={{ delay: 0.45, duration: 0.45 }}
           >
             <a className="btn btn-primary" href={`mailto:${contactEmail}`}>
-              Let&apos;s talk
+              Email me
               <ArrowRight size={18} aria-hidden />
             </a>
             <a className="btn btn-ghost" href="#builds">
-              See what I&apos;ve built
+              See the work
             </a>
           </motion.div>
         </div>
@@ -74,7 +69,6 @@ export function Hero() {
             <img src="/hero.png" alt="Jack Rockell" width={560} height={560} className="hero-img" />
             <div className="hero-ring" aria-hidden />
           </div>
-          <p className="hero-caption muted">AI-accelerated. Production-obsessed.</p>
         </motion.div>
       </div>
     </section>

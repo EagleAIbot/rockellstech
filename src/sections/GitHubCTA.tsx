@@ -19,14 +19,14 @@ export function GitHubCTA() {
               <Github size={32} strokeWidth={1.75} />
             </div>
             <div className="github-copy">
-              <h2 className="headline-lg github-title">Open source on GitHub</h2>
+              <h2 className="headline-lg github-title">Code</h2>
               <p className="muted github-desc">
-                This site lives at <strong className="text-strong">EagleAIbot/rockellstech</strong>—clone it, fork it, or
-                deploy your own. Override <code className="inline-code">VITE_GITHUB_URL</code> only if you need a different link.
+                This site is open source on GitHub at <strong className="text-strong">EagleAIbot/rockellstech</strong>. Fork it,
+                steal the layout, or deploy your own version.
               </p>
             </div>
             <a href={githubUrl} className="btn btn-primary github-btn" target="_blank" rel="noreferrer">
-              View repository
+              GitHub
               <ExternalLink size={17} aria-hidden />
             </a>
           </div>

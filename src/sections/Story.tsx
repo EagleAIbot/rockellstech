@@ -14,44 +14,43 @@ export function Story() {
     <section id="story" className="story section">
       <div className="wrap">
         <motion.p className="eyebrow" {...fade}>
-          The arc
+          Background
         </motion.p>
         <motion.h2 className="headline-lg" {...fade}>
-          CEO at Eagle AI Labs—then hands-on product across the stack.
+          Eagle AI Labs, then product-heavy work.
         </motion.h2>
         <motion.p className="lead story-lead" {...fade} transition={{ duration: 0.5, ease, delay: 0.04 }}>
-          That period wasn&apos;t management theatre: it was shipping alongside the team—same codebases, same production
-          constraints, same accountability for what went live.
+          I wasn&apos;t sitting in meetings while other people shipped. I was in the same codebases, same outages, same
+          deadlines as everyone else.
         </motion.p>
         <div className="story-grid">
           <motion.article className="story-card" {...fade}>
-            <h3 className="story-card-title">Leadership</h3>
+            <h3 className="story-card-title">CEO</h3>
             <p className="muted">
-              For <strong className="text-strong">two and a half years</strong> I was CEO of Eagle AI Labs—setting direction,
-              owning investor and partner conversations, and making sure we shipped, not just slid.
+              About <strong className="text-strong">two and a half years</strong> as CEO: direction, investors, partners—and
+              making sure we actually released software, not just decks.
             </p>
           </motion.article>
           <motion.article className="story-card" {...fade} transition={{ duration: 0.5, ease, delay: 0.08 }}>
-            <h3 className="story-card-title">Product depth</h3>
+            <h3 className="story-card-title">Product</h3>
             <p className="muted">
-              As things matured I moved <strong className="text-strong">closer to product</strong>: model roadmaps, live systems,
-              and the interfaces traders and operators actually touch.
+              Over time I spent more time on <strong className="text-strong">live systems</strong>: what models ran, how they
+              were served, and what traders and operators saw on screen.
             </p>
           </motion.article>
           <motion.article className="story-card" {...fade} transition={{ duration: 0.5, ease, delay: 0.16 }}>
-            <h3 className="story-card-title">What happened next</h3>
+            <h3 className="story-card-title">Now</h3>
             <p className="muted">
-              The company <strong className="text-strong">restructured</strong>. That cleared the runway for me to double down on
-              building under my own flag—same standards, sharper focus.
+              The company <strong className="text-strong">restructured</strong>. I&apos;m building under my own name now—same
+              bar for quality, less noise around it.
             </p>
           </motion.article>
           <motion.article className="story-card story-card-wide" {...fade} transition={{ duration: 0.5, ease, delay: 0.22 }}>
-            <h3 className="story-card-title">How I build today</h3>
+            <h3 className="story-card-title">How I work</h3>
             <p className="muted">
-              I&apos;m <strong className="text-strong">not positioning as a textbook &quot;coder&quot;</strong>—I&apos;m positioning
-              as someone who ships. I use AI aggressively and responsibly to go from spec to production: design, implementation,
-              review, iteration. That workflow is a craft I&apos;ve pushed to an <strong className="text-strong">exceptionally high
-              level</strong>—the kind of profile teams at places like Meta hire when they care about velocity <em>and</em> taste.
+              I&apos;m not trying to sound like a Leetcode profile. I use AI in the loop for design, implementation, and review,
+              and I get to production fast. That&apos;s the skill I&apos;ve been drilling: ship something real, fix what breaks,
+              repeat.
             </p>
           </motion.article>
         </div>
