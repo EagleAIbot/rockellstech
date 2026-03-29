@@ -20,12 +20,12 @@
   position: fixed;
   inset: 0;
   z-index: 0;
-  opacity: 0.85;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
   .hero-canvas-wrap {
-    opacity: 0.55;
+    opacity: 0.88;
   }
 }
 
