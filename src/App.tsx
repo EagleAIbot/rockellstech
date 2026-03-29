@@ -1,5 +1,11 @@
 import './App.css'
+import { lazy, Suspense } from 'react'
 import { Header } from './components/Header'
+
+const HeroBackdrop = lazy(async () => {
+  const m = await import('./components/HeroBackdrop')
+  return { default: m.HeroBackdrop }
+})
 import { Footer } from './components/Footer'
 import { Hero } from './sections/Hero'
 import { Story } from './sections/Story'
@@ -11,6 +17,9 @@ export default function App() {
     <div className="app">
       <div className="mesh" aria-hidden />
       <div className="grid-floor" aria-hidden />
+      <Suspense fallback={null}>
+        <HeroBackdrop />
+      </Suspense>
       <div className="content">
         <Header />
         <main>

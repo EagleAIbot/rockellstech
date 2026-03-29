@@ -15,6 +15,20 @@
     var(--bg-deep);
 }
 
+.hero-canvas-wrap {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .hero-canvas-wrap {
+    opacity: 0.55;
+  }
+}
+
 .grid-floor {
   pointer-events: none;
   position: fixed;
@@ -25,7 +39,7 @@
     linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 70%);
-  opacity: 0.9;
+  opacity: 0.42;
 }
 
 .content {
