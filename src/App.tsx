@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import './App.css'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
@@ -10,6 +11,10 @@ import { Specialisms } from './sections/Specialisms'
 import { Meet } from './sections/Meet'
 import { Credibility } from './sections/Credibility'
 import { ContactStrip } from './sections/ContactStrip'
+
+const ResumeDownload = lazy(() =>
+  import('./sections/ResumeDownload').then((m) => ({ default: m.ResumeDownload })),
+)
 import { useScrollReveal } from './hooks/useScrollReveal'
 
 export default function App() {
@@ -44,6 +49,11 @@ export default function App() {
           <Credibility />
         </div>
         <div className="rt-stack-card" style={{ zIndex: 9 }}>
+          <Suspense fallback={null}>
+            <ResumeDownload />
+          </Suspense>
+        </div>
+        <div className="rt-stack-card" style={{ zIndex: 10 }}>
           <ContactStrip />
         </div>
       </main>

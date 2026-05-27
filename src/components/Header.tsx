@@ -8,6 +8,7 @@ const links = [
   { href: '#track-record', label: 'Track record' },
   { href: '#lanes', label: 'Products' },
   { href: '#about', label: 'About' },
+  { href: '#resume', label: 'Resume' },
 ]
 
 export function Header() {

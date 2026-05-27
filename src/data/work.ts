@@ -22,8 +22,8 @@ export const flagshipWork: WorkItem[] = [
   },
   {
     title: 'Pitch Predict',
-    category: 'Eagle AI · Sports',
-    impact: 'Soccer prediction product. Internal models to consumer brand.',
+    category: 'Pitch Predict · Sports',
+    impact: 'Separate sports company. Soccer prediction product, own brand and stack.',
     wins: ['pitchpredict.ai live: fixtures, models, bet builder', 'SportRadar + ECS, match-week scale'],
     liveUrl: 'https://pitchpredict.ai',
     liveLabel: 'Live',

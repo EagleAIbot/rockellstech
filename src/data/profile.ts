@@ -5,7 +5,7 @@ export const heroBio = {
   role: 'Builder · AI-native',
   headline: 'I build sick shit with AI.',
   subhead: 'Products, agents, ML, infra. Spec to prod. No theatre.',
-  lede: 'Oracle, Pitch Predict, CLAW, JARVIS, trading terminals, stealth agents, sports models. I use AI hard in the loop and still own what breaks in prod.',
+  lede: 'Oracle and CLAW at Eagle AI Labs. Pitch Predict is its own thing (pitchpredict.ai). Plus JARVIS, terminals, agents, sports models. AI in the loop, still on the hook when prod breaks.',
   aside: 'This site is the proof. Live systems, not slides.',
 }
 
@@ -115,8 +115,8 @@ export const productLanes = [
   },
   {
     slug: 'pitch',
-    title: 'Pitch Predict · Sports',
-    hook: 'Soccer prediction on pitchpredict.ai. Models, APIs, WC2026, content automation.',
+    title: 'Pitch Predict',
+    hook: 'Separate company from Eagle AI. pitchpredict.ai: models, APIs, WC2026, content automation.',
     tags: ['ECS', 'Models', 'SportRadar'],
   },
   {
