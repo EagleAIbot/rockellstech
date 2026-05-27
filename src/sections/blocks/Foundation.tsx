@@ -18,7 +18,7 @@ export function Foundation() {
     <section id="foundations" className="s-found section">
       <div className="wrap">
         <p className="s-eyebrow">Where I focus</p>
-        <h2 className="s-h2-wide">Foundations you can tune—without rebuilding from zero.</h2>
+        <h2 className="s-h2-wide">Foundations you can tune without rebuilding from zero.</h2>
         <div className="s-found-chips">
           {cats.map((c) => (
             <span key={c} className="s-chip">

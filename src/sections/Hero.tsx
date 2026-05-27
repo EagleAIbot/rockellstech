@@ -1,54 +1,58 @@
-import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
-
-const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'hello@rockellstech.com'
+import { ArrowDown } from 'lucide-react'
+import { HERO_VIDEO, HERO_VIDEO_FALLBACK } from '../media/videos'
+import { heroBio, heroStats } from '../data/profile'
+import { getContactEmail } from '../config'
 
 export function Hero() {
+  const contactEmail = getContactEmail()
   return (
-    <section className="s-hero section">
-      <div className="s-hero-wrap">
-        <motion.div
-          className="s-hero-copy"
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <p className="s-hero-brand">Rockell Tech · Jack Rockell</p>
-          <h1 className="s-hero-h1">
-            <span className="s-hero-line1">Product-first · Built to ship</span>
-            <span className="s-hero-line2">
-              Models, infra, and UI that survive <span className="text-gradient">contact with reality.</span>
-            </span>
-          </h1>
-          <p className="s-hero-sub">
-            Former CEO at Eagle AI Labs (two and a half years). Hands-on product now—crypto ML, sports products,
-            compliance-style onboarding, trading UIs. I own the loop from spec to something running in prod.
-          </p>
-          <p className="s-hero-try">
-            <a href="#pillars">Give it a try — see how I work ↓</a>
-          </p>
-          <div className="s-hero-btns">
-            <a className="rt-btn rt-btn-solid rt-btn-lg" href={`mailto:${contactEmail}`}>
-              Get in touch
-              <ArrowRight size={18} aria-hidden />
-            </a>
-            <a className="rt-btn rt-btn-outline rt-btn-lg" href="#ships">
-              Explore the work
-            </a>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="s-hero-photo"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15, duration: 0.5 }}
-        >
-          <div className="hero-frame hero-frame-accent">
-            <img src="/hero.png" alt="Jack Rockell" width={720} height={720} className="hero-img" />
-          </div>
-        </motion.div>
+    <section className="rt-hero rt-hero--bio" id="top">
+      <div className="rt-hero-video" aria-hidden>
+        <video autoPlay muted loop playsInline preload="auto" className="rt-hero-video__vid">
+          <source src={HERO_VIDEO} type="video/mp4" />
+          <source src={HERO_VIDEO_FALLBACK} type="video/mp4" />
+        </video>
+        <div className="rt-hero-video__overlay" />
       </div>
+      <div className="rt-hero-grain" aria-hidden />
+
+      <div className="container rt-hero-bio-grid">
+        <div className="rt-hero-portrait rt-ani-1">
+          <div className="rt-hero-portrait-ring" aria-hidden />
+          <img src="/hero.png" alt="Jack Rockell" width={799} height={800} className="rt-hero-portrait-img" />
+        </div>
+
+        <div className="rt-hero-story">
+          <p className="rt-hero-role rt-ani-2">{heroBio.role}</p>
+          <h1 className="rt-hero-name rt-ani-2">{heroBio.name}</h1>
+          <p className="rt-hero-headline rt-ani-3">{heroBio.headline}</p>
+          <p className="rt-hero-subhead rt-ani-3">{heroBio.subhead}</p>
+          <p className="rt-hero-lede rt-ani-4">{heroBio.lede}</p>
+          <p className="rt-hero-aside rt-ani-4">{heroBio.aside}</p>
+
+          <ul className="rt-hero-stats rt-ani-5" aria-label="Career highlights">
+            {heroStats.map((s) => (
+              <li key={s.label} className="rt-hero-stat">
+                <span className="rt-hero-stat__num">{s.num}</span>
+                <span className="rt-hero-stat__label">{s.label}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="rt-hero-actions rt-ani-5">
+            <a className="btn btn-primary" href="#work">
+              See what I&apos;ve built
+            </a>
+            <a className="btn btn-secondary" href={`mailto:${contactEmail}`}>
+              Email me
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#work" className="rt-hero-scroll" aria-label="Scroll to work">
+        <ArrowDown size={20} />
+      </a>
     </section>
   )
 }

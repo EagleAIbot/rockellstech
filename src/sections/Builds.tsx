@@ -5,27 +5,25 @@ import {
   BarChart3,
   Cpu,
   ExternalLink,
-  Github,
   LayoutDashboard,
   ShieldCheck,
   Trophy,
 } from 'lucide-react'
 import { featuredRepos, moreRepos } from '../data/featuredRepos'
-import { getGithubProfileUrl } from '../config'
 
 const items = [
   {
     icon: Cpu,
     title: 'Crypto & markets',
     body:
-      'Forward curves, retrain paths, analytics APIs, AWS-shaped plumbing—built for hours when markets are open.',
+      'Forward curves, retrain paths, analytics APIs, AWS-shaped plumbing built for hours when markets are open.',
     span: 'large',
   },
   {
     icon: Trophy,
     title: 'Sports & betting',
     body:
-      'Dashboards and models around fixtures and operators—used on match week, not shelved after a demo.',
+      'Dashboards and models around fixtures and operators used on match week, not shelved after a demo.',
     span: 'medium',
   },
   {
@@ -39,28 +37,26 @@ const items = [
     icon: LayoutDashboard,
     title: 'Trading & ops UIs',
     body:
-      'PWAs with sockets, wallets, and mirror modes—built for people who live in the product.',
+      'PWAs with sockets, wallets, and mirror modes built for people who live in the product.',
     span: 'small',
   },
   {
     icon: BarChart3,
     title: 'Research → production',
     body:
-      'Repeatable train and eval, containers, deploys—plus a frontend when the loop needs a face.',
+      'Repeatable train and eval, containers, deploys plus a frontend when the loop needs a face.',
     span: 'small',
   },
   {
     icon: Activity,
     title: 'Signals & execution',
     body:
-      'Filters and validation around when systems act—not only what they plot.',
+      'Filters and validation around when systems act not only what they plot.',
     span: 'small',
   },
 ]
 
 export function Builds() {
-  const profileUrl = getGithubProfileUrl()
-
   return (
     <section id="builds" className="builds section">
       <div className="wrap">
@@ -83,7 +79,7 @@ export function Builds() {
           Shipping lanes
         </motion.h2>
         <p className="lead builds-sub">
-          Where the work clusters—models, services, and UI. Same thread from spec to production.
+          Where the work clusters models, services, and UI. Same thread from spec to production.
         </p>
 
         <div className="bento">
@@ -107,19 +103,14 @@ export function Builds() {
 
         <div className="work-ledger">
           <div className="work-ledger-head">
-            <h3 className="work-ledger-title">Public code</h3>
-            <p className="work-ledger-lead">
-              Representative repos—short context, then open the source.{' '}
-              <a href={profileUrl} target="_blank" rel="noreferrer" className="work-ledger-profile">
-                Full profile →
-              </a>
-            </p>
+            <h3 className="work-ledger-title">What shipped</h3>
+            <p className="work-ledger-lead">What shipped.</p>
           </div>
 
           <ul className="work-ledger-list">
             {featuredRepos.map((repo, i) => (
               <motion.li
-                key={repo.repoUrl}
+                key={repo.title}
                 className="work-ledger-row"
                 initial={{ opacity: 0, x: -12 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -132,28 +123,19 @@ export function Builds() {
                     {repo.liveUrl ? <span className="work-ledger-live">Live</span> : null}
                   </div>
                   <span className="work-ledger-name">{repo.title}</span>
-                  <p className="work-ledger-hook">{repo.hook}</p>
+                  <p className="work-ledger-hook">{repo.impact}</p>
                   <ul className="work-ledger-points">
-                    {repo.points.map((p) => (
-                      <li key={p}>{p}</li>
+                    {repo.wins.map((w) => (
+                      <li key={w}>{w}</li>
                     ))}
                   </ul>
-                  <div className="work-ledger-stack">
-                    {repo.stack.map((t) => (
-                      <span key={t}>{t}</span>
-                    ))}
-                  </div>
                 </div>
                 <div className="work-ledger-actions">
-                  <a className="work-ledger-link" href={repo.repoUrl} target="_blank" rel="noreferrer">
-                    <Github size={16} strokeWidth={2} aria-hidden />
-                    Source
-                    <ArrowUpRight size={15} aria-hidden />
-                  </a>
                   {repo.liveUrl ? (
-                    <a className="work-ledger-link work-ledger-link-dim" href={repo.liveUrl} target="_blank" rel="noreferrer">
+                    <a className="work-ledger-link" href={repo.liveUrl} target="_blank" rel="noreferrer">
                       <ExternalLink size={15} aria-hidden />
                       {repo.liveLabel ?? 'Open'}
+                      <ArrowUpRight size={15} aria-hidden />
                     </a>
                   ) : null}
                 </div>
@@ -165,10 +147,10 @@ export function Builds() {
             <span className="work-ledger-more-label">More</span>
             <div className="work-ledger-more-links">
               {moreRepos.map((r) => (
-                <a key={r.repoUrl} href={r.repoUrl} target="_blank" rel="noreferrer">
+                <span key={r.name} className="work-ledger-more-item">
                   {r.name}
                   <span className="work-ledger-more-note">{r.note}</span>
-                </a>
+                </span>
               ))}
             </div>
           </div>

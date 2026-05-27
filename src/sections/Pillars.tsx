@@ -25,7 +25,7 @@ const pillars = [
   {
     icon: Boxes,
     title: 'Research → production',
-    desc: 'Repeatable train, deploy, and ship—not one-off demos.',
+    desc: 'Repeatable train, deploy, and ship not one-off demos.',
   },
 ]
 
@@ -34,7 +34,7 @@ export function Pillars() {
     <section id="pillars" className="pillars section">
       <div className="wrap">
         <p className="pillars-eyebrow">What I focus on</p>
-        <h2 className="pillars-title">Built across the full stack—not a single lane.</h2>
+        <h2 className="pillars-title">Built across the full stack not a single lane.</h2>
         <div className="pillars-grid">
           {pillars.map((p, i) => (
             <motion.article

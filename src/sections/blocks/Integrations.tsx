@@ -8,7 +8,7 @@ export function Integrations() {
     <section id="integrations" className="s-int section">
       <div className="wrap">
         <h2 className="s-h2-center">Tools &amp; patterns in the mix</h2>
-        <p className="s-sub-center">Not a badge farm—just what shows up in real repos I’ve shipped.</p>
+        <p className="s-sub-center">Not a badge farm just what shows up in real repos I’ve shipped.</p>
         <div className="s-int-rows">
           {rows.map((row) => (
             <div key={row.join()} className="s-int-row">

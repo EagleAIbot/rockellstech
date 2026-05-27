@@ -2,13 +2,13 @@ import { motion } from 'framer-motion'
 import { GitBranch, Headphones, Layers, LineChart, Lock, MessageSquare, Radio, Zap } from 'lucide-react'
 
 const adv = [
-  { icon: Zap, title: 'Velocity with taste', desc: 'Fast doesn’t mean sloppy—defaults are documented.' },
-  { icon: Layers, title: 'End-to-end ownership', desc: 'Models, services, UI—I connect the seams.' },
+  { icon: Zap, title: 'Velocity with taste', desc: 'Fast doesn’t mean sloppy defaults are documented.' },
+  { icon: Layers, title: 'End-to-end ownership', desc: 'Models, services, UI I connect the seams.' },
   { icon: LineChart, title: 'Honest metrics', desc: 'We measure what changes decisions.' },
   { icon: GitBranch, title: 'Sane branching', desc: 'Main stays shippable; experiments don’t rot.' },
   { icon: Radio, title: 'Live systems mindset', desc: 'Outages, rollbacks, and on-call empathy.' },
   { icon: Lock, title: 'Risk-aware builds', desc: 'Compliance and security as design inputs.' },
-  { icon: MessageSquare, title: 'Plain communication', desc: 'No mystique—clear tradeoffs and timelines.' },
+  { icon: MessageSquare, title: 'Plain communication', desc: 'No mystique clear tradeoffs and timelines.' },
   { icon: Headphones, title: 'Direct line', desc: 'You talk to the builder, not a relay race.' },
 ]
 
@@ -26,7 +26,7 @@ export function Advantage() {
         <div className="wrap">
           <h2 className="s-h2-center">The Rockell advantage</h2>
           <p className="s-sub-center">
-            Former CEO at Eagle AI Labs; hands-on product now. Same bar for quality—less theatre, more shipping.
+            Former CEO at Eagle AI Labs; hands-on product now. Same bar for quality less theatre, more shipping.
           </p>
           <div className="s-adv-grid">
             {adv.map((a, i) => (
@@ -50,7 +50,7 @@ export function Advantage() {
       <section id="process" className="s-proc section">
         <div className="wrap">
           <h2 className="s-h2-center">How I work, simplified</h2>
-          <p className="s-sub-center">No black box—just a loop you can inspect.</p>
+          <p className="s-sub-center">No black box just a loop you can inspect.</p>
           <div className="s-proc-row">
             {process.map((p, i) => (
               <motion.div

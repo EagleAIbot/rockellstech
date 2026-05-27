@@ -22,13 +22,13 @@ const blocks = [
   {
     title: 'Integrations that stick',
     body:
-      'The boring parts—queues, object storage, DB config, auth boundaries—are where products die or scale. I default to patterns that teams can extend without archaeology.',
+      'The boring parts queues, object storage, DB config, auth boundaries are where products die or scale. I default to patterns that teams can extend without archaeology.',
     bullets: ['Fewer bespoke snowflakes', 'Docs and handover that match the code', 'Same rigor across greenfield and rescue'],
   },
   {
     title: 'Signal you can act on',
     body:
-      'Pretty charts aren’t the goal. I care whether the right person can decide faster Monday morning—whether that’s risk, ops, or product.',
+      'Pretty charts aren’t the goal. I care whether the right person can decide faster Monday morning whether that’s risk, ops, or product.',
     bullets: ['Instrumentation that matches decisions', 'Honest about uncertainty', 'Iteration with adults in the room'],
   },
 ]
@@ -38,7 +38,7 @@ export function DeepDive() {
     <section id="deep" className="s-deep section">
       <div className="wrap">
         <p className="s-eyebrow">The detail</p>
-        <h2 className="s-h2-wide">Same themes—spelled out the way I’d explain them in a room.</h2>
+        <h2 className="s-h2-wide">Same themes spelled out the way I’d explain them in a room.</h2>
         <div className="s-deep-stack">
           {blocks.map((b, i) => (
             <motion.article

@@ -1,20 +1,19 @@
 import { ArrowRight, ExternalLink } from 'lucide-react'
-import { getGithubUrl } from '../../config'
-
-const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'hello@rockellstech.com'
+import { getContactEmail, getGithubUrl } from '../../config'
 const quotes = [
-  { q: 'Jack doesn’t disappear after the kickoff—he stays in the code with you.', a: 'Product lead', o: 'Trading infra' },
+  { q: 'Jack doesn’t disappear after the kickoff he stays in the code with you.', a: 'Product lead', o: 'Trading infra' },
   { q: 'Rare mix: can talk to investors Monday and debug prod Tuesday.', a: 'Founder', o: 'Startup' },
   { q: 'Our ML path finally looked like something we could operate, not just train.', a: 'Engineering manager', o: 'Fintech' },
 ]
 
 export function CloseSection() {
+  const contactEmail = getContactEmail()
   const githubUrl = getGithubUrl()
   return (
     <section id="contact" className="s-close section">
       <div className="wrap">
         <h2 className="s-h2-center">Trusted by people who ship under pressure</h2>
-        <p className="s-sub-center s-quote-note">Roles anonymized—happy to put real names on for serious conversations.</p>
+        <p className="s-sub-center s-quote-note">Roles anonymized happy to put real names on for serious conversations.</p>
         <div className="s-quote-grid">
           {quotes.map((x) => (
             <blockquote key={x.q} className="s-quote">

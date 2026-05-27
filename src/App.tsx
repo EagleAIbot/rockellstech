@@ -2,38 +2,52 @@ import './App.css'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Hero } from './sections/Hero'
-import { StackMarquee } from './sections/blocks/Marquee'
-import { PillarsFive } from './sections/blocks/PillarsFive'
-import { DeepDive } from './sections/blocks/DeepDive'
-import { ShipCards } from './sections/blocks/ShipCards'
-import { Foundation } from './sections/blocks/Foundation'
-import { Story } from './sections/Story'
-import { Builds } from './sections/Builds'
-import { Advantage } from './sections/blocks/Advantage'
-import { Integrations } from './sections/blocks/Integrations'
-import { CloseSection } from './sections/blocks/Close'
+import { StackStrip } from './sections/StackStrip'
+import { ProjectsCarousel } from './sections/ProjectsCarousel'
+import { VideoBreak } from './sections/VideoBreak'
+import { Philosophy } from './sections/Philosophy'
+import { Specialisms } from './sections/Specialisms'
+import { Meet } from './sections/Meet'
+import { Credibility } from './sections/Credibility'
+import { ContactStrip } from './sections/ContactStrip'
+import { useScrollReveal } from './hooks/useScrollReveal'
 
 export default function App() {
+  useScrollReveal()
+
   return (
-    <div className="app">
-      <div className="rt-bg" aria-hidden />
-      <div className="content">
-        <Header />
-        <main>
+    <div className="rt-app">
+      <Header />
+      <main className="rt-stack">
+        <div className="rt-stack-card" style={{ zIndex: 1 }}>
           <Hero />
-          <StackMarquee />
-          <PillarsFive />
-          <DeepDive />
-          <ShipCards />
-          <Story />
-          <Foundation />
-          <Builds />
-          <Advantage />
-          <Integrations />
-          <CloseSection />
-        </main>
-        <Footer />
-      </div>
+        </div>
+        <div className="rt-stack-card" style={{ zIndex: 2 }}>
+          <StackStrip />
+        </div>
+        <div className="rt-stack-card" style={{ zIndex: 3 }}>
+          <ProjectsCarousel />
+        </div>
+        <div className="rt-stack-card" style={{ zIndex: 4 }}>
+          <VideoBreak />
+        </div>
+        <div className="rt-stack-card" style={{ zIndex: 5 }}>
+          <Philosophy />
+        </div>
+        <div className="rt-stack-card" style={{ zIndex: 6 }}>
+          <Specialisms />
+        </div>
+        <div className="rt-stack-card" style={{ zIndex: 7 }}>
+          <Meet />
+        </div>
+        <div className="rt-stack-card" style={{ zIndex: 8 }}>
+          <Credibility />
+        </div>
+        <div className="rt-stack-card" style={{ zIndex: 9 }}>
+          <ContactStrip />
+        </div>
+      </main>
+      <Footer />
     </div>
   )
 }

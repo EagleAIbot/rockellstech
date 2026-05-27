@@ -27,7 +27,7 @@ export function Story() {
           <motion.article className="story-card" {...fade}>
             <h3 className="story-card-title">CEO</h3>
             <p className="muted">
-              About <strong className="text-strong">two and a half years</strong> as CEO: direction, investors, partners—and
+              About <strong className="text-strong">two and a half years</strong> as CEO: direction, investors, partners and
               making sure we actually released software, not just decks.
             </p>
           </motion.article>
@@ -41,7 +41,7 @@ export function Story() {
           <motion.article className="story-card" {...fade} transition={{ duration: 0.5, ease, delay: 0.16 }}>
             <h3 className="story-card-title">Now</h3>
             <p className="muted">
-              The company <strong className="text-strong">restructured</strong>. I&apos;m building under my own name now—same
+              The company <strong className="text-strong">restructured</strong>. I&apos;m building under my own name now same
               bar for quality, less noise around it.
             </p>
           </motion.article>
