@@ -10,8 +10,9 @@
 
 1. **Settings → Pages → Custom domain:** `rockellstech.com` (save).
 2. DNS at your registrar: GitHub’s **A** records on `@` and **CNAME** `www` → `eagleaibot.github.io` (see GitHub’s DNS checklist).
-3. Wait until **DNS check** passes in Pages settings, then turn on **Enforce HTTPS** (required for the padlock).
-4. This repo uses **`vite.config.ts` `base: '/'`** so assets work on the apex domain.
+3. Wait until **DNS check** passes and the certificate shows active (can take up to 24h after DNS changes). Then turn on **Enforce HTTPS**.
+4. If the browser says **connection not private** on `https://`, the cert is not ready yet. Use `http://rockellstech.com` until GitHub finishes provisioning, or remove/re-add the custom domain in Pages settings to retry.
+5. This repo uses **`vite.config.ts` `base: '/'`** so assets work on the apex domain.
 
 ## URLs
 
