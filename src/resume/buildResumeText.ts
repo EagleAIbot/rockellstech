@@ -49,15 +49,36 @@ export function downloadTextFile(filename: string, content: string) {
   URL.revokeObjectURL(url)
 }
 
+/** Load hero photo as PNG data URL — react-pdf often fails on raw JPEG/EXIF blobs */
 export async function fetchPhotoDataUrl(): Promise<string> {
   const base = import.meta.env.BASE_URL || '/'
-  const res = await fetch(`${base}hero.png`)
-  if (!res.ok) throw new Error('Could not load profile photo')
-  const blob = await res.blob()
+  const path = `${base}hero.png`.replace(/\/+/g, '/')
+  const src = path.startsWith('http') ? path : new URL(path, window.location.origin).href
+
   return new Promise((resolve, reject) => {
-    const reader = new FileReader()
-    reader.onloadend = () => resolve(reader.result as string)
-    reader.onerror = reject
-    reader.readAsDataURL(blob)
+    const img = new Image()
+    img.crossOrigin = 'anonymous'
+    img.onload = () => {
+      const size = 256
+      const canvas = document.createElement('canvas')
+      canvas.width = size
+      canvas.height = size
+      const ctx = canvas.getContext('2d')
+      if (!ctx) {
+        reject(new Error('Could not prepare profile photo'))
+        return
+      }
+      const iw = img.naturalWidth
+      const ih = img.naturalHeight
+      const scale = Math.max(size / iw, size / ih)
+      const sw = size / scale
+      const sh = size / scale
+      const sx = (iw - sw) / 2
+      const sy = 0
+      ctx.drawImage(img, sx, sy, sw, sh, 0, 0, size, size)
+      resolve(canvas.toDataURL('image/png'))
+    }
+    img.onerror = () => reject(new Error('Could not load profile photo'))
+    img.src = src
   })
 }

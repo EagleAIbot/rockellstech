@@ -70,11 +70,9 @@ const styles = StyleSheet.create({
   },
   link: { color: accent, textDecoration: 'none' },
   photo: {
-    width: 64,
-    height: 64,
+    width: 72,
+    height: 72,
     borderRadius: 6,
-    objectFit: 'cover',
-    objectPosition: 'center top',
   },
   sectionTitle: {
     fontSize: 8,
