@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import { ExternalLink, Copy, Check, Lock, LogOut } from 'lucide-react'
 import { trackerJobs, trackerProfile, trackerUpdated } from '../data/trackerJobs'
 import {
+  positioningLine,
   universalWhyMe,
   roleBlurbs,
   workExperience,
   skillsList,
+  searchTerms,
   greenhouseAnswers,
 } from '../data/trackerContent'
 import { isTrackerConfigured, isTrackerUnlocked, lockTracker, unlockTracker } from '../lib/trackerAuth'
@@ -113,8 +115,9 @@ export function JobTrackerPage() {
         <div>
           <p className="jt-eyebrow">Private · {trackerUpdated}</p>
           <h1>Apply tracker</h1>
+          <p className="jt-muted jt-positioning">{positioningLine}</p>
           <p className="jt-muted">
-            {trackerProfile.email} · Salary default £{trackerProfile.salaryGbp}
+            {trackerProfile.email} · Default salary £{trackerProfile.salaryGbp}
           </p>
         </div>
         <div className="jt-header-actions">
@@ -134,6 +137,17 @@ export function JobTrackerPage() {
           </button>
         </div>
       </header>
+
+      <section className="jt-panel">
+        <h2>Your lane</h2>
+        <p className="jt-lane-note">
+          Forward Deployed · Applied AI · AI Product — not ML research or crypto-only.
+        </p>
+        <details className="jt-details">
+          <summary>LinkedIn / Indeed search terms</summary>
+          <p className="jt-search-terms">{searchTerms.join(' · ')}</p>
+        </details>
+      </section>
 
       <section className="jt-panel">
         <h2>Quick copy</h2>

@@ -1,19 +1,23 @@
 # Job tracker — Jack Rockell
 
-**Last polled (UTC):** 2026-05-27T21:32:48Z
+**Last polled (UTC):** 2026-05-28T08:48:56Z
 
 Run `./poll-jobs.sh` to refresh. ✅ = apply link OK.
 
 | Pri | ID | Fit | Active | Company | Role | Remote | Status | Apply |
 |-----|-----|-----|--------|---------|------|--------|--------|-------|
-| 1 | P01 | 9/10 | ✅ 200 | Prolific | Senior Product Engineer | Remote, UK | **todo** | [Apply](https://job-boards.eu.greenhouse.io/prolific/jobs/4390860101) |
-| 2 | P02 | 9/10 | ✅ 200 | Owen Thomas (B Corp) | Senior Product Engineer (Python) | Remote, UK | **todo** | [Apply](https://www.remoteitjobs.app/job/owen-thomas-b-corp-senior-product-engineer-python-django-fastapi-tdd-aws-javascript-building-human-intelligence-ai-infra-research-healthcare-remote-uk-80-100k-bonus-equity) |
-| 3 | M01 | 9/10 | ✅ 200 | Longshot Systems | Senior Machine Learning Researcher | Hybrid London (Thu office) | **todo** | [Apply](https://apply.workable.com/longshot-systems-ltd/j/7A58A7782C) |
-| 4 | M02 | 8/10 | ✅ 200 | Superbet / Happening | Senior ML Engineer – Applied ML & Research | Remote UK (verify on apply) | **todo** | [Apply](https://builtinlondon.uk/job/senior-machine-learning-engineer-applied-ml-research/8942880) |
-| 5 | T01 | 8/10 | ✅ 200 | Applied Blockchain | Senior Trading Platform Engineer (Full Stack) | Hybrid Waterloo, London | **todo** | [Apply](https://sailonchain.com/jobs/senior-trading-platform-engineer-full-stack-applied-blockchain) |
-| 6 | C01 | 7/10 | ✅ 200 | Kraken | Engineering (browse open roles) | Remote-first | **todo** | [Apply](https://www.kraken.com/careers) |
-| 7 | M03 | 7/10 | ✅ 200 | OpenBet | Generative AI Engineer | London / Athens / Lviv | **todo** | [Apply](https://talents.studysmarter.co.uk/companies/openbet/generative-ai-engineer-14370402/) |
-| 8 | B01 | 5/10 | ✅ 200 | Blockchain.com | Senior Back-End Engineer, Trading Platform | London, 4 days/week office | **skip** | [Apply](https://gm.careers/jobs/3fe312d4-19c3-4d3d-85c0-d62c941e9953) |
+| 1 | F01 | 10/10 | ✅ 200 | Tomoro AI | Applied AI Solutions Engineer (UK) | UK-wide | **todo** | [Apply](https://tomoro.ai/careers/uk-applied-ai-solution-engineer) |
+| 2 | F02 | 9/10 | ✅ 200 | TORTUS | Forward Deployed Engineer | UK (verify on apply) | **todo** | [Apply](https://jobs.ashbyhq.com/tortus/e857b2d8-2b5f-4ea4-b7a0-b74fdc027043) |
+| 3 | F03 | 9/10 | ✅ 200 | Encord | Forward Deployed Engineer | London | **todo** | [Apply](https://jobs.lever.co/CordTechnologies/2e207b48-9076-4e27-bc1a-36c7290c5dfe) |
+| 4 | F04 | 9/10 | ✅ 200 | V7 Labs | Forward Deployed Engineer — AI | London (on-site — check) | **todo** | [Apply](https://jobs.ashbyhq.com/v7labs.com/c26d2c49-eaae-438c-9aa0-4dafbea315bc) |
+| 5 | F05 | 8/10 | ✅ 200 | Customuse | Forward-Deployed Engineer, AI Creative Tools | Verify on apply | **todo** | [Apply](https://jobs.ashbyhq.com/customuse/a18cb093-9188-4264-be26-ba37350c09db) |
+| 6 | F06 | 8/10 | ✅ 200 | Growth Protocol | Forward Deployed Engineer | Verify on apply | **todo** | [Apply](https://jobs.ashbyhq.com/growthprotocol/cff5edc0-8bff-4e3b-9731-75d124275f99) |
+| 7 | P01 | 8/10 | ✅ 200 | Prolific | Senior Product Engineer (Remote UK) | Remote, UK | **todo** | [Apply](https://job-boards.eu.greenhouse.io/prolific/jobs/4390860101) |
+| 8 | A01 | 8/10 | ✅ 200 | EdTech (via Opus) | AI Engineer — Agentic Workflows (LangGraph) | Remote UK / London flexible | **todo** | [Apply](https://jaabz.com/jobs/216074-artificial-intelligence-engineer) |
+| 9 | F07 | 7/10 | ✅ 200 | Palantir | Forward Deployed AI Engineer | London hybrid | **todo** | [Apply](https://jobs.lever.co/palantir/ff1029bd-bb6d-4d78-a03e-5f9744d0b798) |
+| 10 | F08 | 6/10 | ✅ 200 | Mistral AI | Applied AI, Fullstack Engineer (Critical Infrastructure) | Verify | **todo** | [Apply](https://jobs.lever.co/mistral/de237900-114c-4e39-aa19-671bb3201eee) |
+| 11 | F09 | 6/10 | ❌ 403 | OpenAI | Forward Deployed Engineer — London | London hybrid 3 days/week | **todo** | [Apply](https://openai.com/careers/forward-deployed-engineer-london/) |
+| 99 | OUT | 0/10 | ❌ 404 | — Skip old tracker roles — | Crypto ML / sports research / generic trading | — | **skip** | [Apply](https://rockellstech.com/apply) |
 
 ## Status legend
 

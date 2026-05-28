@@ -81,6 +81,25 @@
   margin: 0.25rem 0 0;
 }
 
+.jt-positioning {
+  max-width: 52ch;
+  line-height: 1.45;
+  color: rgba(232, 237, 247, 0.75);
+}
+
+.jt-lane-note {
+  font-size: 0.9rem;
+  color: var(--accent, #0891b2);
+  margin: 0 0 0.75rem;
+}
+
+.jt-search-terms {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0.5rem 0 0;
+  color: rgba(232, 237, 247, 0.6);
+}
+
 .jt-header-actions {
   display: flex;
   gap: 0.5rem;

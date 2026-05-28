@@ -2,7 +2,7 @@
 
 export const resumeMeta = {
   name: 'Jack Rockell',
-  title: 'Senior Product Engineer · ML · Live Systems',
+  title: 'AI Product Engineer · Applied AI & Agents',
   email: 'jack@shiftaitech.com',
   phone: '',
   location: 'United Kingdom',
@@ -19,7 +19,7 @@ export const careerHighlights = [
 ]
 
 export const resumeSummary =
-  'Senior product engineer, 3+ years shipping live ML, trading, and agent platforms. Own systems end to end at Eagle AI Labs and Pitch Predict. Python, TypeScript, Go, AWS, PyTorch, LLM tool-calling. In the codebase when prod breaks.'
+  'AI product engineer who ships live agents, MVPs, and customer-facing systems. Built multi-tool LLM workflows (JARVIS, Dexter), full-stack products at Eagle AI Labs and Pitch Predict, and client delivery at Shift AI Tech. Python, TypeScript, Go, AWS, FastAPI, React/Vue, tool-calling. In the codebase when production breaks — not slide decks.'
 
 export const skillGroups = [
   {
